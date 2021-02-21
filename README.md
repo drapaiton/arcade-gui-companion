@@ -1,1 +1,1 @@
-# arcade-gui-companion
+https://kivy.org/doc/stable/installation/installation-linux.html#linux-ppa
