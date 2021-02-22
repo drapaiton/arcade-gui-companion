@@ -1,3 +1,4 @@
-import src
+from src.apps.selector import MainApp
 
-src.MainApp().run()
+if __name__ == "__main__":
+    MainApp().run()

@@ -1,14 +1,23 @@
-<RootMenu>
+<OverridableLayout>
     canvas:
         Color:
             rgb: 1,0,0
         Rectangle:
             size: self.size
             pos: self.pos
-    PrincipalButtons:
+    ButtonList:
+    OnlyPlayer:
 
+<OnlyPlayer>
+    id: OPlayer
+    state:"play"
+    visible:True
+    source:self.VIDEOS.FAIRPLAY
+    keep_ratio:False
+    allow_stretch:True
 
-<PrincipalButtons>
+<ButtonList>
+    id: PButtons
     padding: 50
     spacing:80
     orientation: 'horizontal'
@@ -18,9 +27,8 @@
         spacing:75
         Button:
             on_press:
-                print(dir(self))
+                PButtons.boton1()
         Button:
-
     BoxLayout:
         orientation: 'vertical'
         spacing:75

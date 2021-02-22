@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from os.path import join
 
 
-def dataclass_with_prefix(prefix: str):
+def dataclass_join_attrs(prefix: str):
     """creates a dataclass then adds prefix to every attribute"""
 
     def decorate(cls):
