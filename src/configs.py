@@ -16,7 +16,3 @@ else:
     Config.set("graphics", "fullscreen", False)
     Config.set("graphics", "borderless", 0)
     Config.set("graphics", "show_cursor", 1)
-
-
-if __name__ == "__main__":
-    pass

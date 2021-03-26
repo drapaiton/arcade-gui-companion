@@ -1,4 +1,5 @@
-from src.apps.selector import MainApp
+from dotenv import load_dotenv
+
 
 if __name__ == "__main__":
-    MainApp().run()
+    load_dotenv(override=True)

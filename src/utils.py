@@ -1,16 +1,21 @@
-from dataclasses import dataclass
-from os.path import join
+from typing import Tuple
+from typing import Optional
+from typing import Any
+
+import yaml
 
 
-def dataclass_join_attrs(prefix: str):
-    """creates a dataclass then adds prefix to every attribute"""
+def load_yaml(file_path: str) -> Tuple[Optional[Any], Optional[str]]:
+    yaml_file, error = None, None
+    try:
+        with open(file_path, "r") as file:
+            yaml_file = yaml.safe_load(file)
+    except Exception as e:
+        error = "Error loading the yaml template file"
 
-    def decorate(cls):
-        cls = dataclass(cls)
-        for k, v in cls.__dataclass_fields__.items():
-            new_value = join(prefix, v.default)
-            setattr(cls, k, new_value)
-            cls.__dataclass_fields__[k].default = new_value
-        return cls
+        pass
+    return yaml_file
 
-    return decorate
+
+def write_yaml(file_path: str):
+    pass
