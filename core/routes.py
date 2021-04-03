@@ -3,7 +3,7 @@ from os.path import abspath
 from os.path import dirname
 from os.path import join
 
-from src.core.decorators import for_every_attribute
+from core.decorators import for_every_attribute
 
 _SCRIPT_PATH = dirname(abspath(__file__))
 _ROOT_FOLDER = join(_SCRIPT_PATH, pardir)
